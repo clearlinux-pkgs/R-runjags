@@ -4,14 +4,13 @@
 #
 Name     : R-runjags
 Version  : 2.0.4.2
-Release  : 4
+Release  : 5
 URL      : https://cran.r-project.org/src/contrib/runjags_2.0.4-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/runjags_2.0.4-2.tar.gz
 Summary  : Interface Utilities, Model Templates, Parallel Computing Methods
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: R-runjags-lib = %{version}-%{release}
-Requires: R-coda
 BuildRequires : JAGS-dev
 BuildRequires : R-coda
 BuildRequires : buildreq-R
@@ -44,10 +43,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550886544
+export SOURCE_DATE_EPOCH=1552947456
 
 %install
-export SOURCE_DATE_EPOCH=1550886544
+export SOURCE_DATE_EPOCH=1552947456
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
