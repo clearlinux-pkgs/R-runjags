@@ -4,7 +4,7 @@
 #
 Name     : R-runjags
 Version  : 2.0.4.2
-Release  : 7
+Release  : 8
 URL      : https://cran.r-project.org/src/contrib/runjags_2.0.4-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/runjags_2.0.4-2.tar.gz
 Summary  : Interface Utilities, Model Templates, Parallel Computing Methods
@@ -43,10 +43,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552947456
+export SOURCE_DATE_EPOCH=1556467055
 
 %install
-export SOURCE_DATE_EPOCH=1552947456
+export SOURCE_DATE_EPOCH=1556467055
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -118,4 +118,3 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %defattr(-,root,root,-)
 /usr/lib64/R/library/runjags/libs/runjags.so
 /usr/lib64/R/library/runjags/libs/runjags.so.avx2
-/usr/lib64/R/library/runjags/libs/runjags.so.avx512
