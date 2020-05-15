@@ -4,7 +4,7 @@
 #
 Name     : R-runjags
 Version  : 2.0.4.6
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/runjags_2.0.4-6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/runjags_2.0.4-6.tar.gz
 Summary  : Interface Utilities, Model Templates, Parallel Computing Methods
@@ -17,16 +17,15 @@ BuildRequires : R-coda
 BuildRequires : buildreq-R
 
 %description
-######################################################################################################
-###
-###  runjags package
-###  Matthew Denwood, 2nd October 2015
-###
-###  Installation from source - help and tips
-###
-###  The instructions below are modified from the rjags package
-###
-######################################################################################################
+Just Another Gibbs Sampler (JAGS), facilitating the use of parallel
+    (or distributed) processors for multiple chains, automated control
+    of convergence and sample length diagnostics, and evaluation of the
+    performance of a model using drop-k validation or against simulated
+    data. Template model specifications can be generated using a standard
+    lme4-style formula interface to assist users less familiar with the
+    BUGS syntax.  A JAGS extension module provides additional distributions
+    including the Pareto family of distributions, the DuMouchel prior and
+    the half-Cauchy prior.
 
 %package lib
 Summary: lib components for the R-runjags package.
@@ -38,21 +37,22 @@ lib components for the R-runjags package.
 
 %prep
 %setup -q -c -n runjags
+cd %{_builddir}/runjags
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1576575196
+export SOURCE_DATE_EPOCH=1589565227
 
 %install
-export SOURCE_DATE_EPOCH=1576575196
+export SOURCE_DATE_EPOCH=1589565227
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
