@@ -4,7 +4,7 @@
 #
 Name     : R-runjags
 Version  : 2.2.1.7
-Release  : 38
+Release  : 39
 URL      : https://cran.r-project.org/src/contrib/runjags_2.2.1-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/runjags_2.2.1-7.tar.gz
 Summary  : Interface Utilities, Model Templates, Parallel Computing Methods
