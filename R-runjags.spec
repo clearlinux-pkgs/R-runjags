@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-runjags
-Version  : 2.2.2.1
-Release  : 42
-URL      : https://cran.r-project.org/src/contrib/runjags_2.2.2-1.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/runjags_2.2.2-1.tar.gz
+Version  : 2.2.2.1.1
+Release  : 43
+URL      : https://cran.r-project.org/src/contrib/runjags_2.2.2-1.1.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/runjags_2.2.2-1.1.tar.gz
 Summary  : Interface Utilities, Model Templates, Parallel Computing Methods
 Group    : Development/Tools
 License  : GPL-2.0
@@ -60,10 +60,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1688665439
+export SOURCE_DATE_EPOCH=1692634175
 
 %install
-export SOURCE_DATE_EPOCH=1688665439
+export SOURCE_DATE_EPOCH=1692634175
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-runjags
 cp %{_builddir}/runjags/COPYING %{buildroot}/usr/share/package-licenses/R-runjags/dfac199a7539a404407098a2541b9482279f690d || :
